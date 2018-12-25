@@ -1,7 +1,9 @@
 ---
 layout: post
 title: Running microk8s behind proxy
+#subtitle: Each post also has a subtitle
 #image: /img/hello_world.jpeg
+#tags: [test]
 ---
  My work workplace is an enterprise with all kinds of administrative controls. Access to the outside network is restricted and routed via a proxy. Now, one day I thougtout of doing some POC with `microk8s`. But the chanllange is to get it rubbibg on our local box(typically windows). So I bootstarpped a VM using `Vagrant`. Now the chanllange is to get `microk8s` running on the box.
 
@@ -76,4 +78,4 @@ sudo systemctl daemon-reload
 sudo systemctl reload snap.microk8s.daemon-kubelet.service
 ```
 
-It took quite a while to get this setup working ! 
+It took quite a while to get this setup working !
