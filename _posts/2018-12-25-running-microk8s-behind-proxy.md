@@ -5,7 +5,7 @@ title: Running microk8s behind proxy
 #image: /img/hello_world.jpeg
 #tags: [test]
 ---
- My work workplace is an enterprise with all kinds of administrative controls. Access to the outside network is restricted and routed via a proxy. Now, one day I thougtout of doing some POC with `microk8s`. But the chanllange is to get it rubbibg on our local box(typically windows). So I bootstarpped a VM using `Vagrant`. Now the chanllange is to get `microk8s` running on the box.
+ My work workplace is an enterprise with all kinds of administrative controls. Access to the outside network is restricted and routed via a proxy. Now, one day I thought of doing some POC with `microk8s`. But the challenge is to get it running on our local box(typically windows). So I bootstarpped a VM using `Vagrant`. Now all left was to get `microk8s` running on the VM  box.
 
  First steps were easy, microk8s is bundled via `snap`. So I installed it using `apt`. Here as well `apt` needed proxy setting so I first exported the required variables :
  ```
