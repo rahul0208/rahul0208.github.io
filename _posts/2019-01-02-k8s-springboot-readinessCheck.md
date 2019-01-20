@@ -3,7 +3,7 @@ layout: post
 title: Configure Pod readiness with Spring Actuator
 #subtitle: Each post also has a subtitle
 #image: /img/hello_world.jpeg
-#tags: [test]
+tags: [k8s, spring]
 ---
 Sometime back I worked on adapating a bank's application runbook using Ansible. Ansible was great it did need any external agents. So we started creating `playbook`s and deploying applications. But then the automation challange was *how do we determine an application is ready ?* so that we proceed deployment of next microservice. In our stack some application were age old spring 2.x applications while some were new age `SpringBoot` 2.0 based applications. SpingBoot provides `actuator endpoints` which lead us to the eventual solution. We added extensions to the `/health` endpoint, checking the availabily of our application dependencis. In older appliations we added `dropwizard` and created a similar ecosystem. In the end we added health check to each our service `Ansible` startup. Well that was Ansible but now we are adapting `Kubernetes`.
 
