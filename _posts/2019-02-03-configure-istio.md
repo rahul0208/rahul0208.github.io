@@ -49,7 +49,7 @@ We can see a `spring-gs` proxy with SYNC status. Thats all is required to  enabl
 ### Telemetry
 In this post We will look at tha telementry feature offerred by Istio. The proxy captures load of metrices which are availbe on the *Istio Dashboard*. Lets determine the address of `garfana` service `microk8s.kubectl get svc -n istio-system` and do a lookup on `3000` port.
 
-![Istio-proxy-status](/img/configure-istio/istio-proxy-status.png)
+![Istio-telemetry](/img/configure-istio/istio-telemetry.png)
 
 Lets now hit our service in a loop :
 
