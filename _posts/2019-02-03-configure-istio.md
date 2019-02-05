@@ -9,7 +9,7 @@ Im my current working profile we are adaption k8s with Istio. Istio as service m
 
 I have been used Microk8s for a while now and I must admit I like smaller footprint and convinent setup it provides for the support packages. We can find out the list of supported packages by using `microk8s.status`.
 
-![Enable-istio](/img/configure_istio/enable-istio.png)
+![Enable-istio](/img/configure-istio/enable-istio.png)
 
 ### Setup
 The command print out which supported packages are enabled / disabled. Enabling `Istio` was a cake walk with the following command :
@@ -18,12 +18,12 @@ The command print out which supported packages are enabled / disabled. Enabling 
 The commands deploys complete Istio suite of services. We can verify by determining components deployed in `istio-system namespace`.
 `microk8s.kubectl get all -n istio-system`
 
-![Istio-system](/img/configure_istio/istio-system.png)
+![Istio-system](/img/configure-istio/istio-system.png)
 
 Now we need run our services with Istio Proxy. This can be done by either selecting a deployed application and then injecting Istio proxy in the respective `pods`. Alternatively we can add `istio-injection label` to a `namespace` and this will inject proxy in all `pods` running under the said `namespace`.  
 `microk8s.kubectl label namespace default istio-injection=true`
 
-![Istio-enabled-namespace](/img/configure_istio/istio-enabled-namespace.png)
+![Istio-enabled-namespace](/img/configure-istio/istio-enabled-namespace.png)
 
 To remove the `label` run the following command : 
 `microk8s.kubectl label --overwrite namespace default istio-injection=`
@@ -36,20 +36,20 @@ K8s created a new pod for the spring-gs deployment. Now lets verify if istio pro
 `microk8s.kubectl get pod`
 `microk8s.kubectl describe pod spring-gs-555cd5cd47-h852d`
 
-![Istio-enabled-springgs](/img/configure_istio/istio-enabled-springgs.png)
+![Istio-enabled-springgs](/img/configure-istio/istio-enabled-springgs.png)
 
 We can see that the new pod contains reference to Envory proxy and the related Istio configuration. This can also be verified by  `istioctl` CLI :
 
 `microk8s.istioctl proxy-status`
 
-![Istio-proxy-status](/img/configure_istio/istio-proxy-status.png)
+![Istio-proxy-status](/img/configure-istio/istio-proxy-status.png)
 
 We can see a `spring-gs` proxy with SYNC status. Thats all is required to  enable a service in Istio
 
 ### Telemetry
 In this post We will look at tha telementry feature offerred by Istio. The proxy captures load of metrices which are availbe on the *Istio Dashboard*. Lets determine the address of `garfana` service `microk8s.kubectl get svc -n istio-system` and do a lookup on `3000` port.
 
-![Istio-proxy-status](/img/configure_istio/istio-proxy-status.png)
+![Istio-proxy-status](/img/configure-istio/istio-proxy-status.png)
 
 Lets now hit our service in a loop :
 
@@ -57,6 +57,6 @@ Lets now hit our service in a loop :
 
 The pilot dashboard will should the request load. 
 
-![Istio-pilot](/img/configure_istio/istio-pilot.png)
+![Istio-pilot](/img/configure-istio/istio-pilot.png)
 
 Istio dashboard looks quite informative. There are several reports in the dashbaord displaying the latest set of captured metrices.
