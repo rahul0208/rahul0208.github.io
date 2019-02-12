@@ -5,15 +5,15 @@ title:  Working with Istio Ingress Gateway
 #image: /img/hello_world.jpeg
 tags: [k8s, istio, microk8s]
 ---
-Previously I configured Istio on Microk8s and deployed a sample spring-greeting service on it. I expelored Istion telemetary feature, looking through the various dashboards it made available in Grafana. As I access my [spring-greeting](http://10.152.183.60:8080/) service I could see the dashboard capturing the traffic.
+Previously I configured [Istio on Microk8s](/2019-02-03-configure-istio/) and deployed a sample spring-greeting service on it. I explored Istio telemetary, looking through the various dashboards it made available in Grafana. As I accessed deployed [spring-greeting](http://10.152.183.60:8080/) service I could see the dashboard capturing the traffic.
 
 ![Spring-gs-telemetry](/img/istio-ingress-gateway/spring-gs-telemetry.png)
 
-But! I am still accessing the service via NodePort. In a service mesh the services are not exposed outside the mesh. The service can be accessed in the cluster via the NodePort. In Microk8s I am running a K8s cluster on my workstation so I can still acess it. Istio offers an Insgress Gateway which can be used in such scenarios to access the service outside of the cluster. I will configure it and try to acess spring-gs using it. Let's first verify istio ingress service  using `microk8s.kubectl get svc  -n istio-system`
+But! I am still accessing the service via NodePort. In a service mesh the services are not exposed outside the mesh. The service can be accessed in the cluster via the NodePort. In Microk8s I am running a K8s cluster on my workstation so I can still acess it. Istio offers an `IngressGateway` which can be used in such scenarios to access the service outside of the cluster. I will configure it and try to acess spring-gs using it. Let's first verify Istio IngressGateway service  using `microk8s.kubectl get svc  -n istio-system`
 
 ![Istio-services](/img/istio-ingress-gateway/svc.png)
 
-The service list contains `istio-ingressgateway` of type `LoadBalancer`. The service exposes various port mapping out of which we will configure the `http port` for our spring-gs. Let's now `describe` the service to know the port mapping by using `microk8s.kubectl describe svc istio-ingressgateway -n istio-system`.
+The service list contains `istio-ingressgateway` of `LoadBalancer` type. The service exposes various port mappings out of which I will configure the `http port` for our spring-gs. Let's now `describe` the service to know the port mapping by using `microk8s.kubectl describe svc istio-ingressgateway -n istio-system`.
 
 ![Ingressgateway-port-mapping](/img/istio-ingress-gateway/port-mapping.png)
 
@@ -70,7 +70,7 @@ $ curl -v http://localhost:31380/
 <
 * Connection #0 to host localhost left intact
 ```
-Now server returns a `404` error. This means the location is not found. Location mapping is configured using `VirtualService`. It can be configured in the following manner :
+Now server returns a `404` error. This means the location is *Not Found*. Location mapping is configured using `VirtualService`. It can be configured in the following manner :
 
 ```
 apiVersion: networking.istio.io/v1alpha3
@@ -95,7 +95,7 @@ spec:
         host: spring-gs
 ```
 
-In the above configured we have created a `VirtualService` which is attached to a list of gateways. The `VirtualService` perfoms a URL rewrite from `/spring-gs` to `/` and sends it to `spring-gs:8080`. Lets do a `curl` and validate the configuration :
+In the above configured we have created a `VirtualService` which is attached to a list of `gateways`. The `VirtualService` perfoms a URL rewrite from `/spring-gs` to `/` and sends it to `spring-gs:8080`. Lets do a `curl` and validate the configuration :
 
 ```
 $ curl -v http://localhost:31380/spring-gs
@@ -118,4 +118,6 @@ $ curl -v http://localhost:31380/spring-gs
 Greetings from Spring Boot!
 ```
 
-The output above shows `HTTP 200`  response.
+The output above shows `HTTP 200` response. The above deployed compoenets are also availbe via `istioctl` commnad line : `microk8s.istioctl get all`
+
+![istioctl-cli](/img/istio-ingress-gateway/istioctl-cli.png)
