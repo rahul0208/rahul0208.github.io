@@ -1,16 +1,12 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Some more details about me
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+My name is **Rahul Sharma**, a seasoned developer with a multitude of experience. Know me better from the following :
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+- [LinkedIn profile](https://www.linkedin.com/in/rahul-sharma-72531111/)
+- [My books]( https://www.amazon.in/l/B07LBFS67W?_encoding=UTF8&redirectedFromKindleDbs=true&ref=dbs_p_ebk_r00_abau_000000&rfkd=1&shoppingPortalEnabled=true)
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
+If you think I can be of help then write to me at rahul0208@gmail.com / rsharma@apache.org
