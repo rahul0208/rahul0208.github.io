@@ -1,9 +1,10 @@
-```layout: post
+---
+layout: post
 title: Build container image using Maven-jib-plugin
 #subtitle: Each post also has a subtitle
 #image: /img/hello_world.jpeg
-#tags: [maven, jib]
-```
+tags: [maven, jib]
+---
 
 Current I am building containers for my project using `DockerFile`. In order to build such a project I would run with `dockerBuild` step in my CI pipeline. Since `Dockerfile` is another piece of code so it needs to be given its share of attention as well. We add steps to execute our app, but there is no one stopping adding further steps. Thus  there are  best practices which must be obeyed while creating such a file.  But do we need such a file ? Most of the time we are excuting the projetc as exBut often in my `spring-boot` projects, I end up creating a jar file which needs to be exectuted as a main program. In this case the `Dockerfile` is quite simple with a `copy` and `extrypoint` step.  So lately I am having an inclination of avoiding the docker file and instead build the `image ` with [google-jib-plugin](https://github.com/GoogleContainerTools/jib). Besides building the image in the build lifecycle there is additional advantage of my CI independent of docker demon.
 
