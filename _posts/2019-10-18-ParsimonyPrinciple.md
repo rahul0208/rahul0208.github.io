@@ -6,8 +6,6 @@ title: Parsimony Principle
 tags: [design]
 ---
 
-# Parsimony Principle
-
 >  *The most simple of two competing theories should be the preferred one, and that entities should not be multiplied needlessly*
 
 I have been building systems for over a decade now. When we build systems there are principles like **Keep It Stupd Simple** or the **You Aint Gonna Need It**. It is important to enforce these principles. These principles are not only applicable to Software development. Simplicity is a general philosophy which is applicable to Science, Technology, Maths etc. Various philosphers have enforced the principle again and again :
