@@ -24,7 +24,7 @@ But yet often while in the middle of building things the concept of simplicity i
 
  These days we are talking about Kubernetes. But working with K8s is not easy. It is a one big mammoth. It has its own learning curve. There are so many things involved. I see many customers jumping to K8s wagon for their ecosystems. But it is important to understand the K8s is developed by Google, just like previous technologies like NoSQL, Big data etc. Google would have use case to support K8s architecture. But there are limited enterprise of that scale. Depending on the ecosystem where it is being absorbed its mileage will vary. It may be quite simple for Google to work with K8s. But this can't be said about others. 
 
- Application development practise like XP, Agile repeatedly enforce keeping things simple. Yet again and again we as architects over-engineer our enterprise architecture. Simplicity is a relative concept. 
+ Application development practise like XP, Agile repeatedly enforce keeping things simple. Yet again and again we as architects over-engineer our enterprise architecture.
 
 
 
