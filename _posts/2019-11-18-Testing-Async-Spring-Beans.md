@@ -5,8 +5,6 @@ title: Testing Async Spring methods
 #image: /img/hello_world.jpeg
 tags: [Unit Testing, Async, CountDownLatch]
 ---
-# Testing Async Spring methods 
-
 Recently I was part of team which started a green field project. Our application was a Spring Boot application. We were strictly adhering to TestDrivenDevelopemnt. Spring has good testing support. We annotated our test classes with `SpringBootTest` and it worked for most of our `RestControllers` and `Repository` layer.
 
 At one place we needed to perform a batch task. The task gets generated from a user request.  If the computation is performed on the  request thread it would lead to request timeout.  So we made a decision to use `Async` support provided by Spring. But then we had the following challenge :
