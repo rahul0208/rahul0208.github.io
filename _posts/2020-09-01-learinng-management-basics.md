@@ -3,7 +3,7 @@ layout: post
 title: Learning Management Lessons
 #subtitle: Each post also has a subtitle
 #image: /img/hello_world.jpeg
-tags: [Failures, learning, Management]
+tags: [Failures, Learning, Management]
 ---
 
 Development has been my forte. I have worked hard and smart to deliver solutions.I have worked at startup, middle tier organisation and so called an enterprise (where I started my career). I have served positions like *consultant*, *senior consultant*, *software engineer*, *principal consultant*, *senior software engineer*, *SDE-2*, *PSD* etc. In all these positions the teams have varied over sizes from 2 ppl to 10 people at maximum. I had done project processes like *waterfall*, *agile*, *kanban* etc. I have been an open source contributor,  occasionally working with a few communities. So that should be enough to set my background.
