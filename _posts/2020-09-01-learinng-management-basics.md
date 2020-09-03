@@ -1,4 +1,4 @@
-partners---
+---
 layout: post
 title: Learning Management Lessons
 #subtitle: Each post also has a subtitle
