@@ -35,6 +35,6 @@ It is needless to say the companies invest a lot on getting the right person. Hi
 
 The Manufacturing unit thinking does more harm than any good. It had pushed my teams to the edge. As a senior member of the development team, I own the responsibility of challenging this thinking. This often lead to conflict but then if every time we are agree with the PM then we are just hands for him. The lower quality and delays have cause stress and anxiety.
 
-> If the project sponsor thinks like this then be prepared to have spit-milk.
+> If the project sponsor thinks like this then be prepared to have spilt-milk.
 
 *PS : I have been in software development and these are my observations for Manufacturing. Please pardon my limited knowledge.*
