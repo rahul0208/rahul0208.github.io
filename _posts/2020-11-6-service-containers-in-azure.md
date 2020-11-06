@@ -15,7 +15,7 @@ In my recent project we had a similar requirement, but instead of Jenkins we had
 
 Alternatively, Azure Devops provides the concept of `services`. These `services` will be started pre build(`Initialize Containers`) and stoped post the project build steps (`Stop Containers`). Azure Devops takes care of the startup and shutdown.  
 
-![Azure-services](/img/azure-service/Steps.png)
+![Azure-services](/img/azure-service/steps.png)
 
 We can start as many `services` as required by our build process. The `services` can be defined using [pipeline resources](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema#resources). These `resources` can be containers or other pipelines, defined in the same file.  We can configure the different options for [containers](https://docs.microsoft.com/en-us/azure/devops/pipelines/yaml-schema?view=azure-devops&tabs=schema%2Cparameter-schema)
 
