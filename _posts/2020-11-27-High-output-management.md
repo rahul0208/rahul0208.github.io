@@ -2,7 +2,7 @@
 layout: post
 title: High output Management
 #subtitle: Each post also has a subtitle
-image: /img/high-output-management/cover.jpeg
+image: /img/high-output-management/cover.jpg
 tags: [Learning, Management]
 ---
 
@@ -34,4 +34,4 @@ You can note from the above I had issues in defining what the management is all 
 
 As an engineer I often recommend the book [Practices of Agile Developer](https://pragprog.com/titles/pad/practices-of-an-agile-developer/) to my new team members. The book is a *gold-mine* for developers outlining what are the basics which they need to stick to.
 
-##### Similarly I have found the book [High output Management by Andrew Groove](https://www.google.co.in/books/edition/High_Output_Management/piCeCgAAQBAJ?hl=en) as a gold-mine for junior managers. People often quote it as **"Management to Engineers"**, I agree with the apt title. 
+##### Similarly I have found the book [High output Management by Andrew Groove](https://www.google.co.in/books/edition/High_Output_Management/piCeCgAAQBAJ?hl=en) as a gold-mine for junior managers. People often quote it as **"Management to Engineers"**, I agree with the apt title.
