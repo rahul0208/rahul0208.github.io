@@ -33,12 +33,13 @@ The `count()` operation in Spark triggers a full scan of the dataset, which can 
 - Use **approximate count techniques**, such as **df.rdd.countApprox(timeout)** for faster estimations.  
 - If an exact count is required, try **optimizing queries** by using indexes, partitions, or pre-aggregated summaries.  
 
-### 4. **Broadcasting Small DataFrames for Efficient Joins**  
+### 5. **Broadcasting Small DataFrames for Efficient Joins**  
+
 One of the biggest performance bottlenecks in Spark is shuffling large datasets during joins. If one of the tables is small, use **broadcast joins** to speed up execution.  
 - Use **broadcast(df)** to distribute small DataFrames to all nodes, avoiding expensive shuffle operations.  
 - Ensure the DataFrame is genuinely small (typically <100MB) to prevent excessive memory usage.  
 
-### 5. **Caching and Checkpointing for Iterative Workloads**  
+### 6. **Caching and Checkpointing for Iterative Workloads**  
 If your Spark job performs multiple transformations on the same dataset, **caching** or **checkpointing** can significantly improve performance:  
 - Use **df.cache()** for frequently accessed DataFrames to keep them in memory.  
 - Use **checkpointing** for long lineage RDDs to avoid recomputation.  
