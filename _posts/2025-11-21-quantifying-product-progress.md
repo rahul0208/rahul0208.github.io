@@ -1,6 +1,6 @@
 ---
 layout: post
-title: From Incomplete to Market-Ready: Quantifying Product Progress
+title: "From Incomplete to Market-Ready: Quantifying Product Progress"
 tags: [Management, Product]
 ---
 Over the last two years, I was in pursuit of a new product. We used an iterative approach, delivering and improving features in every cycle. Because the product was aspirational in nature, every feature often required updates or changes after the first cut. I was leading a technology team tasked with delivering these business aspirations, but a significant challenge emerged: while the tech team operated in short iterations, the business stakeholders operated on yearly delivery targets. This discrepancy created a **chasm** in our operations several times during our journey.
